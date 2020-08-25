@@ -1,0 +1,13 @@
+n = int(input())
+
+arr = []
+for i in range(n):
+    if i < n//2:
+        numX, striX = input().strip().split()
+        arr.append((int(numX), '-'))
+    else:
+        numX, striX = input().strip().split()
+        arr.append((int(numX), striX))
+
+arr.sort(key=lambda tup: tup[0])
+print(*[x[1] for x in arr])
